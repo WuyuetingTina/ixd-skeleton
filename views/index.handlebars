@@ -1,8 +1,73 @@
+<!doctype html>
+
 <html>
 <head>
-	<title>Test Page</title>
+	<title>HCI Project Portfolio</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/introHCI.css" rel="stylesheet">
+  
+  	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/introHCI.js"></script>
+
 </head>
+
 <body>
-Begin here (or replace this with any static code already written).
+	<div class="container">
+
+		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
+		<!-- p means paragraph -->
+		<div class="jumbotron">
+			<h3 id="name">Recipe Master</h3>
+            <a href="/search"><input id="shipping"></a>
+
+			<script>
+							function showDialog(val) {
+									if (val == "Search"){
+										var dialog = document.querySelector('dialog');
+										dialog.innerHTML = "This field can't be blank";
+										console.log(dialog);
+										dialog.show();
+										setTimeout(function () {
+											dialog.close();
+										}, 3000);
+									}
+									else {
+										console.out('okay');
+									}
+									
+								}
+						</script>
+            <input type="button" value="Search" onclick="showDialog(this.value)">
+			<dialog id='dialog'></dialog>
+
+		</div>
+
+		{{!-- <div id="facebookPhoto" class="profile">
+			<h3>Profile Photo</h3>
+			<img id="photo" class='img-responsive' src="http://hci.stanford.edu/courses/cs547/Resources/Pictures/klemmer_grad.jpg" />
+		</div>
+
+		<h3>Projects</h3> --}}
+		<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
+		<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
+		<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
+		<a href="/project/1"><img id="photo" class='food' src="images/food1.jpeg" />
+		<img id="photo" class='food' src="images/food2.png" />
+
+		<img id="photo" class='food' src="images/food3.png" />
+		<img id="photo" class='food' src="images/food4.jpg" /></a>
+
+		<img src="images/30381613702417_.pic.jpg" class="icon">
+		<a href="/like">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/OOjs_UI_icon_heart.svg/1024px-OOjs_UI_icon_heart.svg.png" class="icon">
+		</a>
+		<img src="https://www.tuktukdesign.com/wp-content/uploads/2020/01/profile-icon-vector.jpg" class="icon">
+
+
+
 </body>
 </html>

@@ -1,0 +1,94 @@
+/* applies to anything of class "example-class-selector" */
+.example-class-selector {
+	margin-top: 2em;
+}
+
+/* applies to any <p> descendants of an element of class "example-class-selector" */
+.example-class-selector p {
+	/* Colors are in hexadecimal: http://www.colorpicker.com/ */	
+	color: #CC00AA;
+}
+
+.jumbotron {
+	position: relative;
+	background: none;
+}
+
+.jumbotron:after {
+     content:"";
+     background: url("https://www.hallmanlindsay.com/wp-content/uploads/2020/09/September-Website-01-1024x481.jpg");
+     opacity: 0.2;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     position: absolute;
+     z-index: -1;	
+}
+
+.jumbotron p {
+     color: #6e6e6e;
+}
+
+.project a {
+     text-align: center;
+}
+
+.project .details {
+     overflow: hidden;
+}
+
+.project .details .detailsImage {
+     width: 200px;
+     margin: 10px 10px 10px 0px;
+     float: left;
+}
+
+.row .thumbnail h4 {
+     text-align: left;
+}
+
+.likeCtr {
+     text-align: center;
+}
+
+.container {
+     width: 30%;
+     margin-left: 35%;
+ }
+
+.food {
+     width: 150px;
+     height: 200px;
+     margin-left: 7%;
+     margin-bottom: 5%;
+ }
+ 
+ .foodinner {
+     width: 350px;
+     height: 400px;
+     margin-left: 7%;
+     margin-bottom: 5%;
+ }
+
+ .icon {
+     width: 50px;
+     height: 50px;
+     margin-left: 15%;
+     /* margin-bottom: 5%; */
+ }
+
+
+ .returnbutton {
+     width: 50px;
+     height: 50px;
+     margin-left: 5%;
+ }
+
+ img {
+      filter: grayscale(100%);
+ }
+ #dialog {
+     width: 270px;
+     height: 70px;
+ }
