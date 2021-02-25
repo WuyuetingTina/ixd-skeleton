@@ -12,6 +12,7 @@ var index = require('./routes/index');
 var project = require('./routes/project');
 var like = require('./routes/like');
 var search = require('./routes/search');
+var login = require('./routes/login');
 
 const { response } = require('express');
 // Example route
@@ -40,9 +41,11 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-app.get('/', index.view);
+app.get('/', login.view);
+app.get('/viewAlt', login.viewAlt);
+app.get('/index', index.view);
 app.get('/project/:id', project.view);
-app.get('/viewAlt', index.viewAlt);
+// app.get('/viewAlt', index.viewAlt);
 app.get('/like', like.view);
 app.get('/search', search.view);
 // Example route
