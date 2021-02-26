@@ -23,6 +23,7 @@ var logins = require('../projects.json');
 // }
 
 exports.view = function(request, response){
+	console.log('okay');
 	logins['viewAlt'] = false;
 	response.render('login', logins);
 	  

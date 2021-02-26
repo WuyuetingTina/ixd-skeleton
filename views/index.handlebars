@@ -55,11 +55,21 @@
 		<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
 		<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
 		<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
-		<a href="/project/1"><img id="photo" class='food' src="images/food1.jpeg" />
+		{{!-- <a href="/project/1"><img id="photo" class='food' src="images/food1.jpeg" />
 		<img id="photo" class='food' src="images/food2.png" />
 
 		<img id="photo" class='food' src="images/food3.png" />
-		<img id="photo" class='food' src="images/food4.jpg" /></a>
+		<img id="photo" class='food' src="images/food4.jpg" /></a> --}}
+
+		{{#each projects}}
+		<div class="project" id="{{id}}">
+				<a href="/project/{{id}}">
+					<img id="photo" style="float:left" class='food' src="{{image}}">
+				</a>
+				<p>{{name}}</p>
+		</div>
+		<br>
+		{{/each}}
 
 		<img src="images/30381613702417_.pic.jpg" class="icon">
 		<a href="/like">
@@ -67,7 +77,7 @@
 		</a>
 		<img src="https://www.tuktukdesign.com/wp-content/uploads/2020/01/profile-icon-vector.jpg" class="icon">
 
-
+		
 
 </body>
 </html>

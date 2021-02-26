@@ -8,6 +8,7 @@
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="/css/introHCI.css" rel="stylesheet">
 
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -19,19 +20,25 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/js/bootstrap.min.js"></script>
+    {{!-- <script src="/projects.json"></script> --}}
+
   </head>
   <body>
 	<!-- this is a comment in HTML -->
 	<div class="container">
     <p><a href="/index"><img src="https://cdn1.iconfinder.com/data/icons/media-line-5/32/ui_icon_expand-09-512.png" class="returnbutton"></a></p>
 
-    <div class="jumbotron">	<h2>Healthy Chicken Rice Soup</h2></div>
+    <div class="jumbotron">	<h2>{{name}}</h2></div>
   		
     
-    <img src="/images/food1.jpeg" class="foodinner">
+    <img src="../{{image}}" class="foodinner">
     <p>Instructions<br></br>
 
 In a large soup pot, heat oil over medium-high heat. Add onion, carrots and celery and cook and stir for 3-4 minutes, until onion begins to turn golden.
 Add garlic, parsley and thyme and cook 1 minute.</p>
+
+
+  
   </body>
+
 </html>

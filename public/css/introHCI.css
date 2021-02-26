@@ -59,8 +59,8 @@
 
 .food {
      width: 150px;
-     height: 200px;
-     margin-left: 7%;
+     height: 150px;
+     margin-left: 5%;
      margin-bottom: 5%;
  }
  
@@ -85,10 +85,10 @@
      margin-left: 5%;
  }
 
- img {
-      filter: grayscale(100%);
- }
+ /* img {
+     
+ } */
  #dialog {
      width: 270px;
-     height: 70px;
+     height: 60px;
  }
