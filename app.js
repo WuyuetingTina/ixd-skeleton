@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -13,6 +12,7 @@ var project = require('./routes/project');
 var like = require('./routes/like');
 var search = require('./routes/search');
 var login = require('./routes/login');
+var upload = require('./routes/upload');
 
 const { response } = require('express');
 // Example route
@@ -48,6 +48,7 @@ app.get('/project/:id', project.view);
 // app.get('/viewAlt', index.viewAlt);
 app.get('/like', like.view);
 app.get('/search', search.view);
+app.get('/upload', upload.view);
 // Example route
 // app.get('/users', user.list);
 

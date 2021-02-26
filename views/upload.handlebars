@@ -8,7 +8,6 @@
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="/css/introHCI.css" rel="stylesheet">
 
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -20,28 +19,37 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/js/bootstrap.min.js"></script>
-    {{!-- <script src="/projects.json"></script> --}}
-
   </head>
   <body>
 	<!-- this is a comment in HTML -->
 	<div class="container">
     <p><a href="/index"><img src="https://cdn1.iconfinder.com/data/icons/media-line-5/32/ui_icon_expand-09-512.png" class="returnbutton"></a></p>
 
-    <div class="jumbotron">	<h2>{{name}}</h2>
-    <h4>({{time_estimate}})</h4>
-    </div> 
-    <img src="../{{image}}" class="foodinner">
-    <h3>Video Demonstration</h3>
+    <div class="jumbotron">
+			<h4 id="recipeName">Recipe Name</h4>
+            <input id="recipeName">
 
-    <iframe width="340" height="315"
-      src="{{videolink}}">
-    </iframe>
-    <h3>Ingredients</h3>
-    <p>{{ingredient}}</p>
-    <h3>Instructions</h3>
-    <p>{{process}}</p> 
-  
+            <h4 id="Time estimate">Time estimate</h4>
+            <input id="Time estimate">
+
+            <h4 id="ingredients">ingredients</h4>
+            <textarea id="ingredients"></textarea>
+
+            <h4 id="Process">Process</h4>
+            <textarea id="Process"></textarea>
+
+            <h4 id="recipeName">Pictures</h4>
+            <input type="file" id="myFile" name="filename">
+
+            <p><br></p>
+            <a href="/index"><input type="button" value="Upload Your Recipe"></a>
+		</div>  	
+    	
+    
+   
+   
+    	
+
+
   </body>
-
 </html>

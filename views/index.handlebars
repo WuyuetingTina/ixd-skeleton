@@ -42,6 +42,8 @@
 								}
 						</script>
             <input type="button" value="Search" onclick="showDialog(this.value)">
+
+			<a href="/upload"><input type="button" value="Upload New Recipe"></a >
 			<dialog id='dialog'></dialog>
 
 		</div>
@@ -64,9 +66,9 @@
 		{{#each projects}}
 		<div class="project" id="{{id}}">
 				<a href="/project/{{id}}">
-					<img id="photo" style="float:left" class='food' src="{{image}}">
-				</a>
-				<p>{{name}}</p>
+					<img style= "border: 1px solid black" id="photo" class='food' src="{{image}}">
+				</a> 
+				<p class="description">{{name}} <br> ({{time_estimate}})</p>
 		</div>
 		<br>
 		{{/each}}
