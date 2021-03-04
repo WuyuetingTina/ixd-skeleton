@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/css/introHCI.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/bootstrap.min.js"></script>
+    {{> facebook}}
+    <script src="/js/facebook.js"></script>
+  </head>
+  <style>
+      h3{
+        margin-left: 30px;
+      }
+  </style>
+  <body>
+      <a href="/index"><img src="https://cdn1.iconfinder.com/data/icons/media-line-5/32/ui_icon_expand-09-512.png" class="returnbutton"></a>
+      <h3>My Account</h3>
+      <div class="jumbotron">
+          <style>
+              #name{
+                  margin-left: 100px;
+                  margin-top: -50px;
+                  margin-bottom: 30px;
+              }
+          </style>
+            <img id="photo" class='img-responsive' width="70px" height="80px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgUNaoFwOOa3sOnMoc8CVUJ65bhS822etxVQ&usqp=CAU" />
+            <h3 id="name">Sample User</h3>
+            <p class="facebookLogin">
+            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+            </p>
+      </div>
+      <p>Uploaded Recipes</p>
+    
+  </body>
+</html>

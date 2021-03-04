@@ -11,6 +11,8 @@
         <script src="https://code.jquery.com/jquery.js"></script>
         <script src="/js/bootstrap.min.js"></script>
         <script src="/js/introHCI.js"></script>
+        {{> facebook}}
+        <script src="/js/facebook.js"></script>
 
     </head>
     <style>
@@ -143,6 +145,7 @@
     <br>
     <br>
     <button onclick="document.getElementById('id01').style.display='block'">Sign Up</button>
+    <a href="/profile"><button>Log In with Facebook</button></a>
     <a href="/index"><button>Sign In</button></a>
 </div>
 
@@ -168,8 +171,7 @@
 
       <div class="clearfix">
         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <button onclick= "window.location.href='/index'" class="signupbtn">Sign Up</button>
-
+        <button type = "button" onclick= "window.location.href='/index'" class="signupbtn">Sign Up</button>
       </div>
     </div>
   </form>

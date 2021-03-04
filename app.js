@@ -13,6 +13,7 @@ var like = require('./routes/like');
 var search = require('./routes/search');
 var login = require('./routes/login');
 var upload = require('./routes/upload');
+var profile = require('./routes/profile');
 
 const { response } = require('express');
 // Example route
@@ -49,6 +50,7 @@ app.get('/project/:id', project.view);
 app.get('/like', like.view);
 app.get('/search', search.view);
 app.get('/upload', upload.view);
+app.get('/profile', profile.view);
 // Example route
 // app.get('/users', user.list);
 
