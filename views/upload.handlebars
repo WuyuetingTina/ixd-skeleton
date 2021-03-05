@@ -26,26 +26,37 @@
     <p><a href="/index"><img src="https://cdn1.iconfinder.com/data/icons/media-line-5/32/ui_icon_expand-09-512.png" class="returnbutton"></a></p>
 
     <div class="jumbotron">
-			<h4 id="recipeName">Recipe Name</h4>
-            <input id="recipeName">
+   <h4 id="recipeName">Recipe Name</h4>
 
-            <h4 id="Time estimate">Time estimate</h4>
-            <input id="Time estimate">
+        <form id="addPostForm" action="/add">
+            <input id="recipeName" name = "recipeName">
 
-            <h4 id="ingredients">ingredients</h4>
-            <textarea id="ingredients"></textarea>
+            <h4 id="Time">Time estimate</h4>
+            <input id="TimeEstimate" name = "TimeEstimate">
 
-            <h4 id="Process">Process</h4>
-            <textarea id="Process"></textarea>
 
-            <h4 id="recipeName">Pictures</h4>
-            <input type="file" id="myFile" name="filename">
+            <h4 id="recipe">Pictures</h4>
+            <input type="url" id="myFile" name="myFile">
 
-            <p><br></p>
-            <a href="/index"><input type="button" value="Upload Your Recipe"></a>
-		</div>  	
-    	
-    
+
+            <h4 id="ingred">ingredients</h4>
+            <textarea id="ingredients" name = "ingredients"></textarea>
+            
+
+            <h4 id="Proc">Process</h4>
+            <textarea id="Process" name = "Process"></textarea>
+
+            
+            {{!-- <input type="file" id="myFile" name="myFile"> --}}
+
+            <p><br></p >
+            {{!-- <a href=" "><input type="button" value="Upload Your Recipe"  action="/add"></a > --}}
+
+  
+          {{!-- <a href="/index"><input type="submit" id="submitBtn" value="Upload Your Recipe"></input></a > --}}
+          <input type="submit" id="submitBtn" value="Upload Your Recipe"></input>
+    </form>
+  </div>
    
    
     	

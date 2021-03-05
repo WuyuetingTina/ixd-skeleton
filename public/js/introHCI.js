@@ -19,3 +19,23 @@ function clickLikeBtn() {
 	ga('send', 'event', 'like', 'click');
 }
 
+
+function myFunctionSearch(){
+    var cls = document.getElementsByClassName("individual");
+    len = cls.length;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+
+  // start the index at 0;
+      n = 0;
+  for (; n < len; n++) {
+    a = cls[n].getElementsByTagName("h1")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            cls[n].style.display = "";
+        } else {
+            cls[n].style.display = "none";
+        }
+  }
+ }
+
