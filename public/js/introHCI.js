@@ -19,18 +19,18 @@ function clickLikeBtn() {
 	ga('send', 'event', 'like', 'click');
 }
 
-
 function myFunctionSearch(){
-    var cls = document.getElementsByClassName("individual");
-    len = cls.length;
-    input = document.getElementById('myInput');
-    filter = input.value.toUpperCase();
+	var cls = document.getElementsByClassName("project");
+	
+	var len = cls.length;
+    var input = document.getElementById('myInput');
+    var filter = input.value.toUpperCase();
 
   // start the index at 0;
-      n = 0;
+    var n = 0;
   for (; n < len; n++) {
-    a = cls[n].getElementsByTagName("h1")[0];
-        txtValue = a.textContent || a.innerText;
+    var a = cls[n].getElementsByTagName("p")[0];
+        var txtValue = a.textContent || a.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
             cls[n].style.display = "";
         } else {
@@ -38,4 +38,3 @@ function myFunctionSearch(){
         }
   }
  }
-

@@ -22,7 +22,9 @@
 		<!-- p means paragraph -->
 		<div class="jumbotron">
 			<h3 id="name">Recipe Master</h3>
-            <a href="/search"><input id="shipping"></a>
+            {{!-- <a href="/search"></a><input id="shipping"></a> --}}
+			<input type="text" id="myInput" onkeyup="myFunctionSearch()" placeholder="Search for items..." title="Type in a name">
+
 
 			<script>
 							function showDialog(val) {
@@ -41,10 +43,13 @@
 									
 								}
 						</script>
-            <input type="button" value="Search" onclick="showDialog(this.value)">
+			 {{!-- <a href="/search"><input type="button" value="Search" onclick="showDialog(this.value)"></a> --}}
+
+            <a href="/search"><input type="button" value="Search"></a>
 
 			<a href="/upload"><input type="button" value="Upload New Recipe"></a >
 			<dialog id='dialog'></dialog>
+
 
 		</div>
 

@@ -6,7 +6,8 @@ var projects = require('../projects.json');
 
 exports.addPost = function(request, response) {  
 
-    var id = projects.projects.length+1;
+    // var id = projects.projects.length+1;
+    var id = projects.projects.slice(-1)[0]['id'] + 1;
     var name = request.query.recipeName;
     var image = request.query.myFile;
     var videolink = request.query.myFile;
@@ -25,9 +26,11 @@ exports.addPost = function(request, response) {
         "time_estimate":time_estimate
     };
 
-
+    
     projects.projects.push(todaysLab);
-    projects.projects.unshift(todaysLab);
+    // projects.projects.unshift(todaysLab);
+    // projects.projects.pop();
+    // console.log(projects.projects);
 
     response.render('index', projects);
     // response.render('project', projects);
