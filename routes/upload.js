@@ -1,24 +1,24 @@
 
-var searchs = require('../projects.json')['projects'];
+var uploads = require('../projects.json')['projects'];
 
-exports.searchInfo = function(request, response) {
-	var searchID = request.params.id;
-	var search = getSearchData(searchID);
-  	response.json(search);
+exports.uploadInfo = function(request, response) {
+	var uploadID = request.params.id;
+	var upload = getUploadData(upload);
+  	response.json(upload);
 }
 
 exports.view = function(request, response) {
-	var searchID = request.params.id;
-	var search = getSearchData(searchID);
-	response.render('upload', search);
+	var uploadID = request.params.id;
+	var upload = getUploadData(uploadID);
+	response.render('upload', upload);
 }
 
-function getSearchData(searchID) {
-	if (searchID == "random") {
-		searchID = Math.floor(Math.random() * searchs.length) + 1;
+function getUploadData(uploadID) {
+	if (uploadID == "random") {
+		uploadID = Math.floor(Math.random() * uploads.length) + 1;
 	} else {
-		searchID = parseInt(searchID);
+		uploadID = parseInt(uploadID);
 	}
-  	var search = searchs[searchID-1]; // of by one, our first project has index 0
-  	return search;	
+  	var upload = uploads[uploadID-1]; // of by one, our first project has index 0
+  	return upload;	
 }

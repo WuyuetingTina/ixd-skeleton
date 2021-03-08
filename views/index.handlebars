@@ -5,10 +5,14 @@
 	<title>HCI Project Portfolio</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/css/introHCI.css" rel="stylesheet">
-  
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/afe8ca4a6e.js" crossorigin="anonymous"></script>
+
   	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/introHCI.js"></script>
@@ -16,75 +20,61 @@
 </head>
 
 <body>
-	<div class="container">
+		<div class="top">
+			<form class="example">
+				<input type="text" id="myInput" onkeyup="myFunctionSearch()" placeholder="Search for items..." title="Type in a name">
+				<button id="upload" type="button" onclick= "window.location.href='/upload'"><i class="fa fa-plus" aria-hidden="true"></i></button>
+				{{!-- <a href="/search"><input type="button" value="Search"></a> --}}
+			</form>
 
-		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
-		<!-- p means paragraph -->
-		<div class="jumbotron">
-			<h3 id="name">Recipe Master</h3>
-            {{!-- <a href="/search"></a><input id="shipping"></a> --}}
-			<input type="text" id="myInput" onkeyup="myFunctionSearch()" placeholder="Search for items..." title="Type in a name">
-
-
-			<script>
-							function showDialog(val) {
-									if (val == "Search"){
-										var dialog = document.querySelector('dialog');
-										dialog.innerHTML = "This field can't be blank";
-										console.log(dialog);
-										dialog.show();
-										setTimeout(function () {
-											dialog.close();
-										}, 3000);
-									}
-									else {
-										console.out('okay');
-									}
-									
-								}
-						</script>
-			 {{!-- <a href="/search"><input type="button" value="Search" onclick="showDialog(this.value)"></a> --}}
-
-            <a href="/search"><input type="button" value="Search"></a>
-
-			<a href="/upload"><input type="button" value="Upload New Recipe"></a >
-			<dialog id='dialog'></dialog>
-
-
+			{{!-- <dialog id='dialog'></dialog> --}}
 		</div>
 
-		{{!-- <div id="facebookPhoto" class="profile">
-			<h3>Profile Photo</h3>
-			<img id="photo" class='img-responsive' src="http://hci.stanford.edu/courses/cs547/Resources/Pictures/klemmer_grad.jpg" />
-		</div>
-
-		<h3>Projects</h3> --}}
-		<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
-		<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
-		<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
-		{{!-- <a href="/project/1"><img id="photo" class='food' src="images/food1.jpeg" />
-		<img id="photo" class='food' src="images/food2.png" />
-
-		<img id="photo" class='food' src="images/food3.png" />
-		<img id="photo" class='food' src="images/food4.jpg" /></a> --}}
-
-		{{#each projects}}
-		<div class="project" id="{{id}}">
+		<div class= "post">
+			{{#each projects}}
+			<div class="project" id="{{id}}">
 				<a href="/project/{{id}}">
 					<img style= "border: 1px solid black" id="photo" class='food' src="{{image}}">
 				</a> 
 				<p class="description">{{name}} <br> ({{time_estimate}})</p>
-		</div>
+			</div>
 		<br>
 		{{/each}}
+		</div>
 
-		<img src="images/30381613702417_.pic.jpg" class="icon">
-		<a href="/like">
-			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/OOjs_UI_icon_heart.svg/1024px-OOjs_UI_icon_heart.svg.png" class="icon">
-		</a>
-		<a href="/profile"><img src="https://www.tuktukdesign.com/wp-content/uploads/2020/01/profile-icon-vector.jpg" class="icon"></a>
+		<div id="buttom">
+				<span id="icons" style="color: rgb(107, 37, 37);">
+					<button id="icon1" type="button" onclick= "window.location.href='/like'"><i class="fa fa-heart fa-3x" aria-hidden="true"></i></button>
 
-		
-
+					<i class="fa fa-home fa-3x" aria-hidden="true"></i> 
+					<a href ="/like" id="icon2"><i class="fa fa-heart fa-3x" aria-hidden="true"></i></a>
+					<i class="fa fa-user fa-3x" aria-hidden="true"><a href="/profile" id="icon3"></a></i>
+				</span>
+		</div>
 </body>
 </html>
+
+
+			{{!-- <script>
+				function showDialog(val) {
+						if (val == "Search"){
+							var dialog = document.querySelector('dialog');
+							dialog.innerHTML = "This field can't be blank";
+							console.log(dialog);
+							dialog.show();
+							setTimeout(function () {
+								dialog.close();
+							}, 3000);
+						}
+						else {
+							console.out('okay');
+						}
+						
+					}
+			</script> --}}
+			{{!-- <a href="/search"><input type="button" value="Search" onclick="showDialog(this.value)"></a> --}}
+			{{!-- <a href="/search"></a><input id="shipping"></a> --}}
+{{!-- 
+			<img src="images/30381613702417_.pic.jpg" class="icon">
+			<a href="/like"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/OOjs_UI_icon_heart.svg/1024px-OOjs_UI_icon_heart.svg.png" class="icon"></a>
+			<a href="/profile"><img src="https://www.tuktukdesign.com/wp-content/uploads/2020/01/profile-icon-vector.jpg" class="icon"></a> --}}
