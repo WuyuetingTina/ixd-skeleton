@@ -34,23 +34,23 @@
 			{{#each projects}}
 			<div class="project" id="{{id}}">
 				<a href="/project/{{id}}">
-					<img style= "border: 1px solid black" id="photo" class='food' src="{{image}}">
-				</a> 
-				<p class="description">{{name}} <br> ({{time_estimate}})</p>
+				    <p class="description" style="color: black;">{{name}} <br> ({{time_estimate}})</p>
+					<img class='food' id="photo"  src="{{image}}">
+				</a>
 			</div>
-		<br>
+			<br>
+			<br>
 		{{/each}}
 		</div>
 
 		<div id="buttom">
-				<span id="icons" style="color: rgb(107, 37, 37);">
-					<button id="icon1" type="button" onclick= "window.location.href='/like'"><i class="fa fa-heart fa-3x" aria-hidden="true"></i></button>
-
-					<i class="fa fa-home fa-3x" aria-hidden="true"></i> 
-					<a href ="/like" id="icon2"><i class="fa fa-heart fa-3x" aria-hidden="true"></i></a>
-					<i class="fa fa-user fa-3x" aria-hidden="true"><a href="/profile" id="icon3"></a></i>
-				</span>
+			<a class="icon1" href="/index"><i class="fa fa-home fa-3x" style="color:rgb(153, 58, 58)"></i></a>
+			<a class="icon2" href="/like"><i class="fa fa-heart fa-3x" style="color:rgb(153, 58, 58)"></i></a>
+			<a class="icon3" href="/Profile"><i class="fa fa-user-circle fa-3x" style="color:rgb(153, 58, 58)"></i></a>
+			<br>
 		</div>
+
+</div>
 </body>
 </html>
 

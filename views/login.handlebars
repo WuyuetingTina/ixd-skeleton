@@ -16,15 +16,20 @@
 
     </head>
     <style>
-    body {font-family: Arial, Helvetica, sans-serif;}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(241, 211, 216);
+      }
     * {box-sizing: border-box;}
 
-    h2 {
+    h3 {
         text-align: center;
         margin-right: auto;
         margin-left: auto;
+        margin-top: -30px;
+        color: rgb(223, 109, 109);
     }
-
+ 
     /* Full-width input fields */
     input[type=text], input[type=password] {
     width: 100%;
@@ -133,19 +138,23 @@
     }
 
     .entry{
-        margin-top: 230px;
+        margin-top: 180px;
+    }
+
+    #cookbook{
+      margin-left: 60px;
     }
 </style>
 
 <body>
 
 <div class="entry">
-    <h2> Welcome to Recipe Master!</h2>
-    <br>
-    <br>
+    <h3> Welcome to Recipe Master!</h3>
+    <img id="cookbook" src="images/cookbook.gif" width="240" height="160">
     <button onclick="document.getElementById('id01').style.display='block'">Sign Up</button>
-    <a href="/profile"><button>Log In with Facebook</button></a>
     <a href="/index"><button>Sign In</button></a>
+    <a href="/profile"><button>Log In with Facebook</button></a>
+
 </div>
 
 
