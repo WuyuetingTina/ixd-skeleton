@@ -30,20 +30,6 @@
      color: #6e6e6e;
 }
 
-/* .project a {
-     text-align: center;
-}
-
-.project .details {
-     overflow: hidden;
-}
-
-.project .details .detailsImage {
-     width: 200px;
-     margin: 10px 10px 10px 0px;
-     float: left;
-} */
-
 .row .thumbnail h4 {
      text-align: left;
 }
@@ -51,12 +37,28 @@
 .likeCtr {
      text-align: center;
 }
-.food {
-     width: 120px;
-     height: 120px;
-     margin-left: 100px;
-     margin-bottom: 10px;
- }
+
+.project{
+     border: solid 5px;
+     background-color: rgb(245, 219, 219);
+     border-color: rgb(218, 136, 136);
+     border-radius: 3%;
+     margin-bottom: 5px;
+     margin-left: 10px;
+     margin-right: 10px; 
+     box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
+
+}
+
+.words{
+     font: darkgray;
+     text-align: center;
+     float: left;
+     margin-left: 180px;
+     margin-right: 20px;
+     margin-top: -70px;
+     font-size: 14px;
+ } 
  
  .foodinner {
      width: 350px;
@@ -88,16 +90,7 @@
      height: 60px;
  }
 
- /* .description {
-      font-size: 16px;
-      margin-left: 180px;
-      margin-top: -100px;
- } */
 
- #photo{
-      border-radius: 20%;
-
- }
 
  .top {
      position: fixed;
@@ -106,9 +99,10 @@
      height: 100px;
      z-index: 1;
  }
+
  .post{
       margin-top: 110px;
-      margin-bottom: 50px;
+      margin-bottom: 70px;
  }
 
 html {
@@ -128,7 +122,7 @@ form.example input[type=text]{
      font-size: 17px;
      color: black;
      border: 10px red;
-     margin-left: 53px;
+     margin-left: 10px;
      width: 75%;
      background: #f1f1f1;
      margin-top:25px;
@@ -139,12 +133,20 @@ form.example input[type=text]{
 #upload {
      position: relative;
      float: left;
-     margin-left: 20px;
-     margin-top: -32px;
+     margin-left: 10px;
+     margin-top: 30px;
      border-radius: 5px;
      color: gray;
      border-color: rgb(194, 102, 102);
      border-style: solid;
+ }
+
+ #question{
+     position: relative;
+     float: right;
+     margin-right: 10px;
+     margin-top: 30px;
+
  }
 
  #buttom {
@@ -167,3 +169,41 @@ form.example input[type=text]{
 .icon3{
      margin-left: 100px;
 }
+
+.img-responsive{
+     float: center;
+     margin-left: auto;
+     margin-right: auto;
+
+}
+.profile-name{
+     float: left;
+     margin-left: 30px;
+}
+.facebook-login{
+     float: right;
+     margin-right: 50px;
+}
+.middle {
+     margin-bottom:50px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+}
+
+button.plus{
+     position:fixed;
+     bottom: 30px;    
+     border-radius: 25px;
+     width: 200px;
+     height: 30px;
+     background-color: rgb(194, 102, 102);
+     color: white;
+     font-size: 16px;
+     border: transparent;
+     border-left: none;
+     cursor: pointer;
+ }
+
+ 

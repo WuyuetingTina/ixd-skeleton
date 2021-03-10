@@ -7,6 +7,7 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="/css/introHCI.css" rel="stylesheet">
+   <script src="/js/introHCI.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,40 +18,26 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
-	<div class="container">
-        <p><a href="/index"><img src="https://cdn1.iconfinder.com/data/icons/media-line-5/32/ui_icon_expand-09-512.png" class="returnbutton"></a></p>
+ <div class="container">
+        <p><a href="/index"><img src="https://cdn1.iconfinder.com/data/icons/media-line-5/32/ui_icon_expand-09-512.png" class="returnbutton"></a ></p >
 
         <div class="jumbotron">
-			<h3 id="name">Recipe Master</h3>
-            <input id="shipping">
-
-			<script>
-							function showDialog(val) {
-									if (val == "Search"){
-										var dialog = document.querySelector('dialog');
-										dialog.innerHTML = "This function not available now!";
-										console.log(dialog);
-										dialog.show();
-										setTimeout(function () {
-											dialog.close();
-										}, 3000);
-									}
-									else {
-										console.out('okay');
-									}
-									
-								}
-						</script>
-            <input type="button" value="Search" onclick="showDialog(this.value)">
-			<dialog id='dialog'></dialog>
-
-		</div>
+   <h3 id="name">Recipe Master</h3>
+  </div>
 
 
-    
-    <img src="/images/food4.jpg" class="foodinner">
-
-<p>My collection<br>1 Recipe</p>
+    <div class= "post">
+   {{#each projects}}
+   <div class="project" id="{{id}}">
+    <a href="/project/{{id}}">
+        <p class="description" style="color: black;">{{name}} <br> ({{time_estimate}})</p >
+     <img class='food' id="photo"  src="{{image}}">
+    </a >
+   </div>
+   <br>
+   <br>
+  {{/each}}
+  </div>
 
 </div>
   </body>

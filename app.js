@@ -15,6 +15,8 @@ var login = require('./routes/login');
 var upload = require('./routes/upload');
 var profile = require('./routes/profile');
 var add = require('./routes/add');
+var add_like = require('./routes/add_like');
+
 
 const { response } = require('express');
 // Example route
@@ -53,6 +55,8 @@ app.get('/search', search.view);
 app.get('/upload', upload.view);
 app.get('/profile', profile.view);
 app.get('/add', add.addPost);
+app.get('/add_like/:id', add_like.addPost);
+
 // Example route
 // app.get('/users', user.list);
 

@@ -30,7 +30,12 @@
 
     <div class="jumbotron">	<h2>{{name}}</h2>
     <h4>({{time_estimate}})</h4>
+    <form id="addPostForm" action="/add_like/{{id}}">
+           
+          <input type="submit" id="submitBtn" value="Like"></input>
+    </form>
     </div> 
+    
     <img class="foodinner" src="{{image}}">
     {{!-- <img src="../{{image}}" class="foodinner"> --}}
     <h3>Video Demonstration</h3>

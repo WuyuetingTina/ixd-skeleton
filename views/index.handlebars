@@ -22,8 +22,11 @@
 <body>
 		<div class="top">
 			<form class="example">
+				<button id="upload" type="button" onclick= "window.location.href='/upload'"><i class="fa fa-plus" style="color:rgb(153, 58, 58);"></i></button>
 				<input type="text" id="myInput" onkeyup="myFunctionSearch()" placeholder="Search for items..." title="Type in a name">
-				<button id="upload" type="button" onclick= "window.location.href='/upload'"><i class="fa fa-plus" aria-hidden="true"></i></button>
+				<i id="question" class="far fa-question-circle fa-2x" style="color: rgb(153, 58, 58);"></i>
+
+
 				{{!-- <a href="/search"><input type="button" value="Search"></a> --}}
 			</form>
 
@@ -34,13 +37,11 @@
 			{{#each projects}}
 			<div class="project" id="{{id}}">
 				<a href="/project/{{id}}">
-				    <p class="description" style="color: black;">{{name}} <br> ({{time_estimate}})</p>
-					<img class='food' id="photo"  src="{{image}}">
+				<div class='food'><img id="photo" width="120" height="120" src="{{image}}"></div>
+				<div class="words"><b><p class="description" style="color: rgb(95, 93, 93);">{{name}} <br> ({{time_estimate}})</p></b></div>
 				</a>
 			</div>
-			<br>
-			<br>
-		{{/each}}
+			{{/each}}
 		</div>
 
 		<div id="buttom">
