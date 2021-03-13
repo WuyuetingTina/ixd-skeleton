@@ -2,27 +2,27 @@
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
-	initializePage();
+ initializePage();
 });
 
 /*
  * Function that is called when the document is ready.
  */
-function initializePage() {
-	// your code here
-	$(".likeBtn").click(clickLikeBtn);
-}
+// function initializePage() {
+//  // your code here
+//  $(".likeBtn").click(clickLikeBtn);
+// }
 
-function clickLikeBtn() {
-	e.preventDefault();
-	ga('create', 'UA-190109776-1', 'auto');
-	ga('send', 'event', 'like', 'click');
-}
+// function clickLikeBtn() {
+//  e.preventDefault();
+//  ga('create', 'UA-190109776-1', 'auto');
+//  ga('send', 'event', 'like', 'click');
+// }
 
 function myFunctionSearch(){
-	var cls = document.getElementsByClassName("project");
-	
-	var len = cls.length;
+ var cls = document.getElementsByClassName("project");
+ 
+ var len = cls.length;
     var input = document.getElementById('myInput');
     var filter = input.value.toUpperCase();
 
@@ -37,4 +37,16 @@ function myFunctionSearch(){
             cls[n].style.display = "none";
         }
   }
+ }
+
+
+
+function count(){
+  console.log('in count');
+ var cls = document.getElementsByClassName("project");
+  console.log(cls);
+
+ var len = cls.length;
+  $("#name").html("helloWOOOO");
+
  }

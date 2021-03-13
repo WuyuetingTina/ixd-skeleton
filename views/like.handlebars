@@ -17,18 +17,17 @@
     <![endif]-->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-
+{{!-- 
  <div class="container">
-        <p><a href="/index"><img src="https://cdn1.iconfinder.com/data/icons/media-line-5/32/ui_icon_expand-09-512.png" class="returnbutton"></a ></p >
 
         <div class="jumbotron">
    <h3 id="name">Recipe Master</h3>
-  </div>
+  </div> --}}
 
-
-    <div class= "post">
+    <p><a href="/index"><img src="https://cdn1.iconfinder.com/data/icons/media-line-5/32/ui_icon_expand-09-512.png" class="returnbutton"></a ></p >
+<div class= "post">
    {{#each projects}}
-   <div class="project" id="{{id}}">
+   <div class="" id="{{id}}">
     <a href="/project/{{id}}">
         <p class="description" style="color: black;">{{name}} <br> ({{time_estimate}})</p >
      <img class='food' id="photo"  src="{{image}}">
@@ -38,6 +37,7 @@
    <br>
   {{/each}}
   </div>
+
 
 </div>
   </body>
