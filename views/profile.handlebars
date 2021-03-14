@@ -108,5 +108,18 @@
       <div class="middle">
         <button class="plus" onclick="window.location.href = '/upload';"><i class="fa fa-plus" aria-hidden="true"></i> Add New Recipe</button>
       </div>
+
+      <div class= "post">
+        {{#each projects}}
+          <div class="project" id="{{id}}">
+            <a href="/project/{{id}}">
+                <p class="description" style="color: black;">{{name}} <br> ({{time_estimate}})</p >
+            <img class='food' id="photo" width="120px" height="120px"  src="{{image}}">
+            </a >
+          </div>
+          <br>
+          <br>
+        {{/each}}
+      </div>
   </body>
 </html>
