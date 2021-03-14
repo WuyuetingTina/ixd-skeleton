@@ -8,37 +8,27 @@
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="/css/introHCI.css" rel="stylesheet">
    <script src="/js/introHCI.js"></script>
+  </head>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-{{!-- 
- <div class="container">
-
-        <div class="jumbotron">
-   <h3 id="name">Recipe Master</h3>
-  </div> --}}
+  <style>
+      h3{
+        margin-top: -8px;
+        margin-left: 30px;
+      }
+  </style>
 
     <p><a href="/index"><img src="https://cdn1.iconfinder.com/data/icons/media-line-5/32/ui_icon_expand-09-512.png" class="returnbutton"></a ></p >
-<div class= "post">
-   {{#each projects}}
-   <div class="project" id="{{id}}">
-    <a href="/project/{{id}}">
-        <p class="description" style="color: black;">{{name}} <br> ({{time_estimate}})</p >
-     <img class='food' id="photo" width="120px" height="120px"  src="{{image}}">
-    </a >
-   </div>
-   <br>
-   <br>
-  {{/each}}
-  </div>
+    <h3 style="color:rgb(153, 58, 58);">My Favourite</h3>
+    <div class= "liked-post">
+    {{#each projects}}
+    <div class="liked" id="{{id}}">
+      <a href="/project/{{id}}">
+        <p class="description" style="color: black;">{{name}}</p >
+        <img class='food' id="photo" width="120px" height="120px"  src="{{image}}">
+      </a>
+    </div>
+    {{/each}}
+    </div>
 
-
-</div>
   </body>
 </html>

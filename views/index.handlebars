@@ -35,13 +35,16 @@
 			<form class="example">
 				<button id="upload" type="button" onclick= "window.location.href='/upload'"><i class="fa fa-plus" style="color:rgb(153, 58, 58);"></i></button>
 				<input type="text" id="myInput" onkeyup="myFunctionSearch()" placeholder="Search for items..." title="Type in a name">
-				<i id="question" class="far fa-question-circle fa-2x" style="color: rgb(153, 58, 58);"></i>
-
-
-				{{!-- <a href="/search"><input type="button" value="Search"></a> --}}
+				<div class="dropdown" style="float:right;">
+					{{!-- <button class="dropbtn"><i class="fa fa-question-circle fa-2x" style="color:rgb(153, 58, 58);"></i></button> --}}
+					<i id="question" onclick="myFunction()" class="far fa-question-circle fa-2x" style="color: rgb(153, 58, 58);"></i>
+					<div id="myDropdown" class="dropdown-content">
+						<p><b>Tip #1</b>: When you click 'the heart' button, the recipe will be added into 'favorite' folder and you will also automatically get into 'favorite' folder. You can find the recipe in 'favorite' folder next time when you would like to review it.</p>
+						<p><b>Tip #2</b>: After you successfully uploading your own recipe to Recipe Master, the recipe will automatically be added to your profile page.</p>
+						<p><b>Tip #3</b>: When you click on the "little plus" sign on the main page, you are able to upload your own recipes</p>
+					</div>
+				</div>
 			</form>
-
-			{{!-- <dialog id='dialog'></dialog> --}}
 		</div>
 
 		<div class= "post">
@@ -62,31 +65,27 @@
 			<br>
 		</div>
 
-</div>
+	<style>
+		p{
+			color: rgb(194, 102, 102);
+		}
+	</style>
+	<script>
+		function myFunction() {
+			document.getElementById("myDropdown").classList.toggle("show");
+		}
+		window.onclick = function(event) {
+			if (!event.target.matches('#question')) {
+				var dropdowns = document.getElementsByClassName("dropdown-content");
+				var i;
+				for (i = 0; i < dropdowns.length; i++) {
+				var openDropdown = dropdowns[i];
+				if (openDropdown.classList.contains('show')) {
+					openDropdown.classList.remove('show');
+				}
+				}
+			}
+		}
+	</script>
 </body>
 </html>
-
-
-			{{!-- <script>
-				function showDialog(val) {
-						if (val == "Search"){
-							var dialog = document.querySelector('dialog');
-							dialog.innerHTML = "This field can't be blank";
-							console.log(dialog);
-							dialog.show();
-							setTimeout(function () {
-								dialog.close();
-							}, 3000);
-						}
-						else {
-							console.out('okay');
-						}
-						
-					}
-			</script> --}}
-			{{!-- <a href="/search"><input type="button" value="Search" onclick="showDialog(this.value)"></a> --}}
-			{{!-- <a href="/search"></a><input id="shipping"></a> --}}
-{{!-- 
-			<img src="images/30381613702417_.pic.jpg" class="icon">
-			<a href="/like"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/OOjs_UI_icon_heart.svg/1024px-OOjs_UI_icon_heart.svg.png" class="icon"></a>
-			<a href="/profile"><img src="https://www.tuktukdesign.com/wp-content/uploads/2020/01/profile-icon-vector.jpg" class="icon"></a> --}}

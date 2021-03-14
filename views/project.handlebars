@@ -7,6 +7,8 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="/css/introHCI.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <script src="https://kit.fontawesome.com/afe8ca4a6e.js" crossorigin="anonymous"></script>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -28,15 +30,14 @@
 	<div class="container">
     <p><a href="/index"><img src="https://cdn1.iconfinder.com/data/icons/media-line-5/32/ui_icon_expand-09-512.png" class="returnbutton"></a></p>
 
-    <div class="jumbotron">	<h2>{{name}}</h2>
-    <h4>({{time_estimate}})</h4>
-    <form id="addPostForm" action="/add_like/{{id}}">
-           
-          <input type="submit" id="submitBtn" value="Like"></input>
-    </form>
-    </div> 
+    <div class="like-head">
+      <img class="foodinner" width = "120" height ="120" src="{{image}}">
+      <h3 id="dish-name">{{name}}</h3>
+      <h4 id="time">({{time_estimate}})</h4>
+      <a id="like-button" href="/add_like/{{id}}"><i class="fa fa-heart fa-2x" style="color:rgb(218, 136, 136)"></i></a>
+    </div>
     
-    <img class="foodinner" src="{{image}}">
+    
     {{!-- <img src="../{{image}}" class="foodinner"> --}}
     <h3>Video Demonstration</h3>
 
